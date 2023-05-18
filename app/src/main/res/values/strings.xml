@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Parking Log</string>
+
+    <string name="pol_number">Nomor Polisi</string>
+    <string name="pol_number_hint">Masukan Nomor Polisi</string>
+
+    <string name="brand_name">Merk Kendaraan</string>
+    <string name="brand_name_hint">Masukan Merk Kendaraan</string>
+
+    <string name="vehicle_color">Warna Kendaraan</string>
+    <string name="vehicle_color_hint">Masukan Warna Kendaraan</string>
+
+    <string name="parking_time">Waktu Parkir</string>
+    <string name="parking_time_hint">Masukan Waktu Parkir</string>
+
+    <string name="type_vehicle">Tipe Kendaraan : </string>
+    <string name="cars">Mobil</string>
+    <string name="motorcycles">Motor</string>
+
+    <string name="save">Simpan</string>
+    <string name="share">Bagikan</string>
+
+    <string name="pol_invalid">Nomor Polisi tidak boleh kosong.</string>
+    <string name="brand_invalid">Nama Brand tidak boleh kosong.</string>
+    <string name="color_invalid">Warna Kendaraan tidak boleh kosong.</string>
+    <string name="time_invalid">Waktu Parking tidak boleh kosong.</string>
+    <string name="type_invalid">Pilih Jenis Kendaraan.</string>
+
+    <string name="total_biaya">Total Biaya Parkir</string>
+
+    <string name="rupiah">Rp. 0</string>
+    <string name="rupiah_x">Rp. %1$s</string>
+
+    <string name="belum_ada_data">Belum ada data</string>
+
+    <string name="histori">Histori</string>
+
+    <string name="add">Tambah</string>
+
+    <string name="hapus_histori">Hapus Histori</string>
+
+    <string name="konfirmasi_hapus">Hapus semua histori?</string>
+    <string name="hapus">Hapus</string>
+    <string name="batal">Batal</string>
+
+</resources>
