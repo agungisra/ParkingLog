@@ -1,27 +1,32 @@
 package org.d3if3022.mobpro1assesment2
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
-import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import org.d3if3022.mobpro1assesment2.databinding.ActivityMainBinding
+import org.d3if3022.mobpro1assesment2.model.HasilBiaya
+import org.d3if3022.mobpro1assesment2.model.MainViewModel
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
+    private val viewModel: MainViewModel by lazy {
+        ViewModelProvider(this)[MainViewModel::class.java]
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.saveBtn.setOnClickListener { saveDataVehicle() }
+        binding.saveBtn.setOnClickListener { hitungBiaya() }
+        viewModel.getHasilBiaya().observe(this) { showResult(it) }
     }
 
-    private fun saveDataVehicle() {
+    private fun hitungBiaya() {
 
         val plateVehicle = binding.polNumberInp.text.toString()
         if (TextUtils.isEmpty(plateVehicle)) {
@@ -47,11 +52,14 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
-        val hitungBiaya = parkingTime.toInt() * 5000
+        viewModel.hitungBiaya(
+            parkingTime.toInt()
+        )
 
-        binding.rpTitle.text = getString(R.string.rupiah_x, hitungBiaya)
+//        Log.d("MainActivity", "Data Berhasil!")
+    }
 
-
-        Log.d("MainActivity", "Data Berhasil!")
+    private fun showResult(result: HasilBiaya?) {
+        binding.rpTitle.text = getString(R.string.rupiah_x, result?.biaya)
     }
 }

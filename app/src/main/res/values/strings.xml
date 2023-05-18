@@ -11,7 +11,7 @@
     <string name="vehicle_color_hint">Masukan Warna Kendaraan</string>
 
     <string name="parking_time">Waktu Parkir</string>
-    <string name="parking_time_hint">Masukan Waktu Parkir</string>
+    <string name="parking_time_hint">Masukan Waktu Parkir (Jam)</string>
 
     <string name="type_vehicle">Tipe Kendaraan : </string>
     <string name="cars">Mobil</string>
@@ -29,7 +29,7 @@
     <string name="total_biaya">Total Biaya Parkir</string>
 
     <string name="rupiah">Rp. 0</string>
-    <string name="rupiah_x">Rp. %1$s</string>
+    <string name="rupiah_x">Rp. %1$d</string>
 
     <string name="belum_ada_data">Belum ada data</string>
 
