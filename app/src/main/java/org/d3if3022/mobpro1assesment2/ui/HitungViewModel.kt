@@ -1,7 +1,8 @@
-package org.d3if3022.mobpro1assesment2.model
+package org.d3if3022.mobpro1assesment2.ui
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import org.d3if3022.mobpro1assesment2.model.HasilBiaya
 
 
 class MainViewModel : ViewModel() {
