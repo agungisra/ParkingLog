@@ -1,12 +1,10 @@
 package org.d3if3022.mobpro1assesment2
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
+import android.view.*
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import org.d3if3022.mobpro1assesment2.databinding.FragmentMainBinding
 
 class MainFragment : Fragment() {
@@ -19,6 +17,7 @@ class MainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentMainBinding.inflate(layoutInflater, container, false)
+        setHasOptionsMenu(true)
         return binding.root
     }
 
@@ -28,9 +27,21 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.carBtn.setOnClickListener{
-            Navigation.findNavController(view).navigate(R.id.action_mainFragment_to_hitungFragment)
+            it.findNavController().navigate(R.id.action_mainFragment_to_hitungFragment)
         }
-
-
     }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.options_menu, menu)
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.menu_about) {
+            findNavController().navigate(
+                R.id.action_mainFragment_to_aboutFragment)
+            return true
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
 }

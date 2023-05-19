@@ -1,5 +1,6 @@
 package org.d3if3022.mobpro1assesment2.ui.hitungmobil
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.LayoutInflater
@@ -9,12 +10,12 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import org.d3if3022.mobpro1assesment2.R
-import org.d3if3022.mobpro1assesment2.databinding.FragmentHitungBinding
+import org.d3if3022.mobpro1assesment2.databinding.FragmentHitungMobilBinding
 import org.d3if3022.mobpro1assesment2.model.HasilBiaya
 
 class HitungFragment : Fragment() {
 
-    private lateinit var binding: FragmentHitungBinding
+    private lateinit var binding: FragmentHitungMobilBinding
 
     private val viewModel: MainViewModel by lazy {
         ViewModelProvider(requireActivity())[MainViewModel::class.java]
@@ -25,14 +26,33 @@ class HitungFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentHitungBinding.inflate(layoutInflater, container, false)
+        binding = FragmentHitungMobilBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.saveBtn.setOnClickListener{ hitungBiaya() }
         viewModel.getHasilBiaya().observe(requireActivity()){ showResult(it)}
+        binding.shareBtn.setOnClickListener { shareData() }
     }
+
+    private fun shareData() {
+        val message = getString(R.string.bagikan_template,
+            binding.polNumberInp.text,
+            binding.brandNameInp.text,
+            binding.colorInp.text,
+            binding.rpTitle.text
+        )
+        val shareIntent = Intent(Intent.ACTION_SEND)
+        shareIntent.setType("text/plain").putExtra(Intent.EXTRA_TEXT, message)
+        if (shareIntent.resolveActivity(
+                requireActivity().packageManager) != null) {
+            startActivity(shareIntent)
+        }
+    }
+
+
+
 
 
     private fun hitungBiaya() {
@@ -69,5 +89,6 @@ class HitungFragment : Fragment() {
 
     private fun showResult(result: HasilBiaya?) {
         binding.rpTitle.text = getString(R.string.rupiah_x, result?.biaya)
+        binding.shareBtn.visibility = View.VISIBLE
     }
 }
