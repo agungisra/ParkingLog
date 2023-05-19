@@ -1,4 +1,4 @@
-package org.d3if3022.mobpro1assesment2.ui
+package org.d3if3022.mobpro1assesment2.ui.hitungmobil
 
 import android.os.Bundle
 import android.text.TextUtils
@@ -33,6 +33,7 @@ class HitungFragment : Fragment() {
         binding.saveBtn.setOnClickListener{ hitungBiaya() }
         viewModel.getHasilBiaya().observe(requireActivity()){ showResult(it)}
     }
+
 
     private fun hitungBiaya() {
 

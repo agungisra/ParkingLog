@@ -43,4 +43,8 @@
     <string name="hapus">Hapus</string>
     <string name="batal">Batal</string>
 
+    <string name="bagikan_template">No. Polisi: %1$d \nMerk Kendaraan: %2$d \nWarna Kendaraan: %3$d \nTotal Biaya Parkir: %4$d</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

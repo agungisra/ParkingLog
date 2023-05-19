@@ -1,4 +1,4 @@
-package org.d3if3022.mobpro1assesment2.ui
+package org.d3if3022.mobpro1assesment2.ui.hitungmobil
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -15,6 +15,5 @@ class MainViewModel : ViewModel() {
     }
 
     fun getHasilBiaya() = hasilBiaya
-
 
 }
