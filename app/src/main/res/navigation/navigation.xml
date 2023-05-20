@@ -7,12 +7,15 @@
 
         <fragment
         android:id="@+id/mainFragment"
-        android:name="org.d3if3022.mobpro1assesment2.MainFragment"
+        android:name="org.d3if3022.mobpro1assesment2.ui.home.MainFragment"
         android:label="@string/app_name"
         tools:layout="@layout/fragment_main" >
             <action
-                android:id="@+id/action_mainFragment_to_hitungFragment"
-                app:destination="@id/hitungFragment" />
+                android:id="@+id/action_mainFragment_to_mobilFragment"
+                app:destination="@id/mobilFragment" />
+            <action
+                android:id="@+id/action_mainFragment_to_motorFragment"
+                app:destination="@id/motorFragment" />
             <action
                 android:id="@+id/action_mainFragment_to_aboutFragment"
                 app:destination="@id/aboutFragment" />
@@ -21,18 +24,23 @@
                 app:destination="@id/historyFragment" />
         </fragment>
     <fragment
-        android:id="@+id/hitungFragment"
-        android:name="org.d3if3022.mobpro1assesment2.ui.hitungmobil.HitungFragment"
+        android:id="@+id/mobilFragment"
+        android:name="org.d3if3022.mobpro1assesment2.ui.hitungmobil.HitungMobilFragment"
         android:label="@string/cars"
         tools:layout="@layout/fragment_hitung_mobil" />
     <fragment
+        android:id="@+id/motorFragment"
+        android:name="org.d3if3022.mobpro1assesment2.ui.hitungmotor.HitungMotorFragment"
+        android:label="@string/motorcycles"
+        tools:layout="@layout/fragment_hitung_motor" />
+    <fragment
         android:id="@+id/aboutFragment"
-        android:name="org.d3if3022.mobpro1assesment2.AboutFragment"
+        android:name="org.d3if3022.mobpro1assesment2.ui.about.AboutFragment"
         android:label="@string/tentang_aplikasi"
         tools:layout="@layout/fragment_about" />
     <fragment
         android:id="@+id/historyFragment"
-        android:name="org.d3if3022.mobpro1assesment2.HistoryFragment"
+        android:name="org.d3if3022.mobpro1assesment2.ui.history.HistoryFragment"
         android:label="@string/history"
         tools:layout="@layout/fragment_history" />
 </navigation>

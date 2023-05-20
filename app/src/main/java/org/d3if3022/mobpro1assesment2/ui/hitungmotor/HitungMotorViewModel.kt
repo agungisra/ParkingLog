@@ -1,4 +1,4 @@
-package org.d3if3022.mobpro1assesment2.ui.hitungmobil
+package org.d3if3022.mobpro1assesment2.ui.hitungmotor
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -9,23 +9,26 @@ import kotlinx.coroutines.withContext
 import org.d3if3022.mobpro1assesment2.db.BiayaDao
 import org.d3if3022.mobpro1assesment2.db.BiayaEntity
 import org.d3if3022.mobpro1assesment2.model.HasilBiaya
+import org.d3if3022.mobpro1assesment2.model.hitungBiaya
 
 
-class HitungViewModel(private val db: BiayaDao) : ViewModel() {
+class HitungMotorViewModel(private val db: BiayaDao) : ViewModel() {
 
     private val hasilBiaya = MutableLiveData<HasilBiaya?>()
 
-    val data = db.getLastBiaya()
+    fun hitungBiaya(nopol: String, merk : String, warna : String, parkingTime: Int) {
 
-    fun hitungBiaya(parkingTime: Int) {
-        val biaya = parkingTime * 5000
-        hasilBiaya.value = HasilBiaya(biaya)
+        val dataBiaya = BiayaEntity(
+            nopol = nopol,
+            merk = merk,
+            warna = warna,
+            waktu = parkingTime
+        )
+
+        hasilBiaya.value= dataBiaya.hitungBiaya()
 
         viewModelScope.launch {
             withContext(Dispatchers.IO) {
-                val dataBiaya = BiayaEntity(
-                    biaya = parkingTime
-                )
                 db.insert(dataBiaya)
             }
         }

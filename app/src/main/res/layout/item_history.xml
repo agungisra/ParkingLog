@@ -15,12 +15,10 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/circle_background"
         android:gravity="center"
-        android:textColor="@color/white"
-        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="I" />
+        />
 
     <TextView
         android:id="@+id/tanggalTextView"

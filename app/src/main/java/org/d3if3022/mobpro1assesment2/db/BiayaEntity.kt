@@ -9,8 +9,8 @@ data class BiayaEntity(
     @PrimaryKey(autoGenerate = true)
     var id: Long = 0L,
     var tanggal: Long = System.currentTimeMillis(),
-//    var nopol: String,
-//    var merk: String,
-//    var warna: String,
-    var biaya: Int
+    var nopol: String,
+    var merk: String,
+    var warna: String,
+    var waktu: Int
 )

@@ -1,10 +1,11 @@
-package org.d3if3022.mobpro1assesment2
+package org.d3if3022.mobpro1assesment2.ui.home
 
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import org.d3if3022.mobpro1assesment2.R
 import org.d3if3022.mobpro1assesment2.databinding.FragmentMainBinding
 
 class MainFragment : Fragment() {
@@ -23,11 +24,14 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-
         super.onViewCreated(view, savedInstanceState)
 
         binding.carBtn.setOnClickListener{
-            it.findNavController().navigate(R.id.action_mainFragment_to_hitungFragment)
+            it.findNavController().navigate(R.id.action_mainFragment_to_mobilFragment)
+        }
+
+        binding.motorcyclesBtn.setOnClickListener{
+            it.findNavController().navigate(R.id.action_mainFragment_to_motorFragment)
         }
     }
 
