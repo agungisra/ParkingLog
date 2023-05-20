@@ -3,6 +3,7 @@ package org.d3if3022.mobpro1assesment2.ui.hitungmobil
 import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,6 +12,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import org.d3if3022.mobpro1assesment2.R
 import org.d3if3022.mobpro1assesment2.databinding.FragmentHitungMobilBinding
+import org.d3if3022.mobpro1assesment2.db.BiayaDb
 import org.d3if3022.mobpro1assesment2.model.HasilBiaya
 
 class HitungFragment : Fragment() {
@@ -18,7 +20,9 @@ class HitungFragment : Fragment() {
     private lateinit var binding: FragmentHitungMobilBinding
 
     private val viewModel: HitungViewModel by lazy {
-        ViewModelProvider(requireActivity())[HitungViewModel::class.java]
+        val db = BiayaDb.getInstance(requireContext())
+        val factory = HitungViewModelFactory(db.dao)
+        ViewModelProvider(this, factory)[HitungViewModel::class.java]
     }
 
     override fun onCreateView(
@@ -33,6 +37,10 @@ class HitungFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.saveBtn.setOnClickListener{ hitungBiaya() }
         viewModel.getHasilBiaya().observe(requireActivity()){ showResult(it)}
+        viewModel.data.observe(viewLifecycleOwner, {
+            if (it == null) return@observe
+            Log.d("HitungFragment", "Data tersimpan. ID = ${it.id}")
+        })
         binding.shareBtn.setOnClickListener { shareData() }
     }
 
@@ -50,11 +58,6 @@ class HitungFragment : Fragment() {
             startActivity(shareIntent)
         }
     }
-
-
-
-
-
     private fun hitungBiaya() {
 
         val plateVehicle = binding.polNumberInp.text.toString()
