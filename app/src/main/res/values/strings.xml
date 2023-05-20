@@ -33,7 +33,7 @@
 
     <string name="belum_ada_data">Belum ada data</string>
 
-    <string name="histori">Histori</string>
+    <string name="history">History</string>
 
     <string name="add">Tambah</string>
 
@@ -47,5 +47,7 @@
 
     <string name="tentang_aplikasi">Tentang Aplikasi</string>
     <string name="description">Parking Log adalah sebuah aplikasi pencatatan parkir yang dirancang untuk memudahkan pengguna dalam mencatat dan mengelola informasi parkir. Dengan menggunakan aplikasi ini, pengguna dapat dengan mudah mencatat nomor polisi kendaraan, nama kendaraan, warna kendaraan, dan waktu parkir dalam hitungan jam.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
