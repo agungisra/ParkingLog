@@ -10,6 +10,7 @@ import androidx.room.Query
 interface BiayaDao {
     @Insert
     fun insert(biaya: BiayaEntity)
+
     @Query("SELECT * FROM biaya ORDER BY id DESC")
     fun getLastBiaya(): LiveData<List<BiayaEntity?>>
 

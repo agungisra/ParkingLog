@@ -55,7 +55,8 @@ class HistoryAdapter :
 
             priceTextView.text = root.context.getString(
                 R.string.rupiah_x,
-                hasilBiaya.biaya)
+                hasilBiaya.biaya
+            )
         }
     }
 

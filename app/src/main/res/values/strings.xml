@@ -16,6 +16,7 @@
     <string name="type_vehicle">Tipe Kendaraan : </string>
     <string name="cars">Mobil</string>
     <string name="motorcycles">Motor</string>
+    <string name="news">Berita</string>
 
     <string name="save">Simpan</string>
     <string name="share">Bagikan</string>
@@ -41,6 +42,8 @@
 
     <string name="add">Tambah</string>
 
+    <string name="check">Lihat</string>
+
     <string name="hapus_histori">Hapus Histori</string>
 
     <string name="konfirmasi_hapus">Hapus semua histori?</string>
@@ -52,5 +55,10 @@
     <string name="tentang_aplikasi">Tentang Aplikasi</string>
     <string name="description">Parking Log adalah sebuah aplikasi pencatatan parkir yang dirancang untuk memudahkan pengguna dalam mencatat dan mengelola informasi parkir. Dengan menggunakan aplikasi ini, pengguna dapat dengan mudah mencatat nomor polisi kendaraan, nama kendaraan, warna kendaraan, dan waktu parkir dalam hitungan jam.</string>
 
+    <string name="message">%1$s diklik!</string>
+
+    <string name="switch_layout">Ubah tampilan</string>
+
+    <string name="koneksi_error">Koneksi error</string>
 
 </resources>

@@ -33,6 +33,10 @@ class MainFragment : Fragment() {
         binding.motorcyclesBtn.setOnClickListener{
             it.findNavController().navigate(R.id.action_mainFragment_to_motorFragment)
         }
+
+        binding.newsBtn.setOnClickListener{
+            it.findNavController().navigate(R.id.action_mainFragment_to_newsFragment)
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
@@ -50,7 +54,6 @@ class MainFragment : Fragment() {
                 findNavController().navigate(R.id.action_mainFragment_to_aboutFragment)
                 return true
             }
-
         }
         return super.onOptionsItemSelected(item)
     }

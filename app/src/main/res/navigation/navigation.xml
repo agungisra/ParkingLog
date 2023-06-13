@@ -22,6 +22,9 @@
             <action
                 android:id="@+id/action_mainFragment_to_historyFragment"
                 app:destination="@id/historyFragment" />
+            <action
+                android:id="@+id/action_mainFragment_to_newsFragment"
+                app:destination="@id/newsFragment" />
         </fragment>
     <fragment
         android:id="@+id/mobilFragment"
@@ -43,4 +46,9 @@
         android:name="org.d3if3022.mobpro1assesment2.ui.history.HistoryFragment"
         android:label="@string/history"
         tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="org.d3if3022.mobpro1assesment2.ui.news.NewsFragment"
+        android:label="@string/news"
+        tools:layout="@layout/fragment_news" />
 </navigation>
