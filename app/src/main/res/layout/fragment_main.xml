@@ -111,53 +111,73 @@
 
         </LinearLayout>
 
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_motor" />
+
         <LinearLayout
             android:id="@+id/card_news"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:layout_margin="16dp"
             android:padding="16dp"
             android:background="@drawable/rounded_stroke"
             android:gravity="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/card_motor">
-
-            <TextView
-                android:id="@+id/news_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/news"
-                android:textStyle="bold"
-                android:textAlignment="center"
-                android:textAppearance="?attr/textAppearanceHeadline6"
-                android:textColor="@color/blue_500"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-            </TextView>
+            app:layout_constraintTop_toBottomOf="@id/divider">
 
             <ImageView
                 android:id="@+id/news_img"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/ic_baseline_newspaper"
+                android:background="@drawable/ic_baseline_view_list"
                 android:backgroundTint="@color/blue_500"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/car_title">
             </ImageView>
 
-            <Button
-                android:id="@+id/news_btn"
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/check"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/car_img">
-            </Button>
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/news_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/daftar_kendaraan"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textColor="@color/blue_500"
+                    android:paddingBottom="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                </TextView>
+
+                <Button
+                    android:id="@+id/news_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/check"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/car_img">
+                </Button>
+            </LinearLayout>
 
         </LinearLayout>
 

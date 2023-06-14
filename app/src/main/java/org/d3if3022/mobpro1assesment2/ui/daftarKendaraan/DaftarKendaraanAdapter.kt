@@ -1,4 +1,4 @@
-package org.d3if3022.mobpro1assesment2.ui.news
+package org.d3if3022.mobpro1assesment2.ui.daftarKendaraan
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -9,7 +9,7 @@ import org.d3if3022.mobpro1assesment2.R
 import org.d3if3022.mobpro1assesment2.databinding.ListItemBinding
 import org.d3if3022.mobpro1assesment2.network.KendaraanApi
 
-class NewsAdapter : RecyclerView.Adapter<NewsAdapter.ViewHolder>() {
+class DaftarKendaraanAdapter : RecyclerView.Adapter<DaftarKendaraanAdapter.ViewHolder>() {
 
     private val data = mutableListOf<Kendaraan>()
 
@@ -24,7 +24,7 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.ViewHolder>() {
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(kendaraan: Kendaraan) = with(binding) {
             namaTextView.text = kendaraan.nama
-            merkTextView.text = kendaraan.merk
+            jenisTextView.text = kendaraan.jenis
             Glide.with(imageView.context)
                 .load(KendaraanApi.getKendaraanUrl(kendaraan.gambar))
                 .error(R.drawable.ic_baseline_broken_image)

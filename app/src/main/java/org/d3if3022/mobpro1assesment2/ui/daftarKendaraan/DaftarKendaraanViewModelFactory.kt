@@ -1,4 +1,4 @@
-package org.d3if3022.mobpro1assesment2.ui.news
+package org.d3if3022.mobpro1assesment2.ui.daftarKendaraan
 
 import android.util.Log
 import androidx.lifecycle.LiveData
@@ -7,11 +7,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import org.d3if3022.mobpro1assesment2.R
 import org.d3if3022.mobpro1assesment2.network.ApiStatus
 import org.d3if3022.mobpro1assesment2.network.KendaraanApi
 
-class NewsViewModelFactory : ViewModel() {
+class DaftarKendaraanViewModelFactory : ViewModel() {
 
     private val data = MutableLiveData<List<Kendaraan>>()
     private val status = MutableLiveData<ApiStatus>()

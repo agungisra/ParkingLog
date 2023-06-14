@@ -26,6 +26,7 @@
                 android:id="@+id/action_mainFragment_to_newsFragment"
                 app:destination="@id/newsFragment" />
         </fragment>
+
     <fragment
         android:id="@+id/mobilFragment"
         android:name="org.d3if3022.mobpro1assesment2.ui.hitungmobil.HitungMobilFragment"
@@ -48,7 +49,7 @@
         tools:layout="@layout/fragment_history" />
     <fragment
         android:id="@+id/newsFragment"
-        android:name="org.d3if3022.mobpro1assesment2.ui.news.NewsFragment"
-        android:label="@string/news"
-        tools:layout="@layout/fragment_news" />
+        android:name="org.d3if3022.mobpro1assesment2.ui.daftarKendaraan.DaftarKendaraanFragment"
+        android:label="@string/daftar_kendaraan"
+        tools:layout="@layout/fragment_daftar_kendaraan" />
 </navigation>

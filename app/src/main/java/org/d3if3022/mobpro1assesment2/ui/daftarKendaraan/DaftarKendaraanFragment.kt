@@ -1,4 +1,4 @@
-package org.d3if3022.mobpro1assesment2.ui.news
+package org.d3if3022.mobpro1assesment2.ui.daftarKendaraan
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -20,30 +20,30 @@ import kotlinx.coroutines.launch
 import org.d3if3022.mobpro1assesment2.R
 import org.d3if3022.mobpro1assesment2.data.SettingDataStore
 import org.d3if3022.mobpro1assesment2.data.dataStore
-import org.d3if3022.mobpro1assesment2.databinding.FragmentNewsBinding
+import org.d3if3022.mobpro1assesment2.databinding.FragmentDaftarKendaraanBinding
 import org.d3if3022.mobpro1assesment2.network.ApiStatus
 
 
-class NewsFragment : Fragment() {
+class DaftarKendaraanFragment : Fragment() {
 
     private val layoutDataStore: SettingDataStore by lazy {
         SettingDataStore(requireContext().dataStore)
     }
 
-    private val viewModel: NewsViewModelFactory by lazy {
-        ViewModelProvider(this)[NewsViewModelFactory::class.java]
+    private val viewModel: DaftarKendaraanViewModelFactory by lazy {
+        ViewModelProvider(this)[DaftarKendaraanViewModelFactory::class.java]
     }
 
-    private lateinit var binding: FragmentNewsBinding
-    private lateinit var myAdapter: NewsAdapter
+    private lateinit var binding: FragmentDaftarKendaraanBinding
+    private lateinit var myAdapter: DaftarKendaraanAdapter
     private var isLinearLayout = true
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentNewsBinding.inflate(layoutInflater, container, false)
-        myAdapter = NewsAdapter()
+        binding = FragmentDaftarKendaraanBinding.inflate(layoutInflater, container, false)
+        myAdapter = DaftarKendaraanAdapter()
         with(binding.recyclerView) {
             addItemDecoration(DividerItemDecoration(context, RecyclerView.VERTICAL))
             adapter = myAdapter
@@ -101,7 +101,7 @@ class NewsFragment : Fragment() {
 
     }
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.main_menu, menu)
+        inflater.inflate(R.menu.kendaraan_menu, menu)
         val menuItem = menu.findItem(R.id.action_switch_layout)
         setIcon(menuItem)
     }
