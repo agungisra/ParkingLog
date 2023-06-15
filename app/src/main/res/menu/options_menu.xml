@@ -10,4 +10,11 @@
         android:id="@+id/menu_about"
         android:title="@string/tentang_aplikasi"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/daftar_kendaraann"
+        android:icon="@drawable/ic_baseline_view_list"
+        android:title="@string/daftar_kendaraan"
+        app:showAsAction="ifRoom" />
+
 </menu>

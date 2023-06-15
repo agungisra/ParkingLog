@@ -5,7 +5,6 @@ plugins {
     id 'androidx.navigation.safeargs.kotlin'
 }
 
-
 android {
     namespace 'org.d3if3022.mobpro1assesment2'
     compileSdk 33
