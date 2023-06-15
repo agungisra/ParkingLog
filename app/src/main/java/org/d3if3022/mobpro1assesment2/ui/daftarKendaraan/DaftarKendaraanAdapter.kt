@@ -27,7 +27,7 @@ class DaftarKendaraanAdapter : RecyclerView.Adapter<DaftarKendaraanAdapter.ViewH
             jenisTextView.text = kendaraan.jenis
             Glide.with(imageView.context)
                 .load(KendaraanApi.getKendaraanUrl(kendaraan.gambar))
-                .error(R.drawable.ic_baseline_broken_image)
+                .error(R.drawable.ic_broken_image)
                 .into(imageView)
 
 

@@ -92,7 +92,7 @@
                 android:id="@+id/motorcycles_img"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/ic_baseline_motorcycles"
+                android:background="@drawable/ic_motorcycles"
                 android:backgroundTint="@color/blue_500"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

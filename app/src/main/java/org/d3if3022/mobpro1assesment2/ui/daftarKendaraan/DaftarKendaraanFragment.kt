@@ -104,9 +104,9 @@ class DaftarKendaraanFragment : Fragment() {
 
     private fun setIcon(menuItem: MenuItem) {
         val iconId = if (isLinearLayout)
-            R.drawable.ic_baseline_grid_view
+            R.drawable.ic_grid_view
         else
-            R.drawable.ic_baseline_view_list
+            R.drawable.ic_view_list
         menuItem.icon = ContextCompat.getDrawable(requireContext(), iconId)
 
     }
