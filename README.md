@@ -1,4 +1,4 @@
-# Assesment 2 - Pemograman Untuk Perangkat Bergerak 1
+# Assesment 2 & 3 - Pemograman Untuk Perangkat Bergerak 1
 Nama : M. Agung Isra Narwin
 
 
